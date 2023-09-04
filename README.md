@@ -112,7 +112,7 @@ npm pkg set type="module"
 ```
 - Install dependencies:
 ```cmd
-npm install @apollo/server graphql
+npm install @apollo/server graphql nodemon
 ```
 - Create `index.js` file.
 
@@ -128,6 +128,11 @@ npm install @apollo/server graphql
 ```cmd
 node index.js
 ```
+ OR
+
+ ```cmd
+ npm start
+ ```
 
 - Go to `localhost:4000`
 
@@ -143,9 +148,31 @@ query GameQuery {
 
 - So, eventhough we explicitly return all the data in our resolver function, Apollo Server is using our resolver function and the data we return to automatically filter out any of the fields the user doens't need.
 
+## Query Variables
+
 - What if we needed to fetch a single author, game or review ? - We need to use `Query variables`
 
 - We need to create an entry-point in the `Query`, then make a resolver function for it, then test it out in the browser.
 
 ![Query Variables](images/image-5.png)
 
+Similarly, implement the Query `variables` for author and `game`.
+
+## Related Data
+
+- Every `Review` is related to a `Game` and an `Author` in our DB.
+- We need to communicate this to our Schema and make the resolver functions.
+
+Reviews Data associated with Game Data
+![Reviews Data associated with Game Data](images/image-6.png)
+
+Reviews Data associated with Author Data
+![Reviews Data associated with Author Data](images/image-7.png)
+
+Author & Game Data associated with Review Data
+![Author & Game Data associated with Review Data](images/image-8.png)
+
+All reviews of a Game
+![All reviews of a Game](images/image-9.png)
+
+# Reference
