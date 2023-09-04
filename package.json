@@ -1,0 +1,19 @@
+{
+  "name": "graphql_tutorial",
+  "version": "1.0.0",
+  "description": "- GraphQL is a Query Language\r - Alternative to using a REST API\r - Uses HTTP requests under the hood, with the Query language sitting on top.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "graphql": "^16.8.0",
+    "nodemon": "^3.0.1"
+  }
+}
