@@ -175,4 +175,21 @@ Author & Game Data associated with Review Data
 All reviews of a Game
 ![All reviews of a Game](images/image-9.png)
 
+## Mutations [Addition & Deletion & Updation]
+
+- "Mutation" is a generic term for any changes we make to the data in GraphQL.
+
+- Define allowed mutations in the schema file under `type Mutation`.
+- Then make the resolver for it in the `index.js` file.
+
+This Delete Mutation will not be permanent though.
+![Delete Mutation](images/image-10.png)
+
+Add Mutation:
+![Add Mutation](images/image-11.png)
+
+Update Mutation:
+![Update Mutation](images/image-12.png)
+
 # Reference
+- https://www.youtube.com/watch?v=5199E50O7SI

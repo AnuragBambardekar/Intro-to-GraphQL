@@ -26,6 +26,19 @@ type Query {
     authors: [Author]
     author(id: ID!): Author
 }
+type Mutation {
+    addGame(game: AddGameInput!): Game
+    deleteGame(id: ID!): [Game]
+    updateGame(id: ID!, edits: EditGameInput!): Game
+}
+input AddGameInput {
+    title: String!,
+    platform: [String!]!
+}
+input EditGameInput {
+    title: String,
+    platform: [String!]
+}
 `
 // The `type Query` is an entrypoint basically.
 // It's like a map for Apollo to structure the graph but they don't actually
